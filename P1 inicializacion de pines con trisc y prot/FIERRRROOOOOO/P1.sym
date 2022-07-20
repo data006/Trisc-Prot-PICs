@@ -1,0 +1,69 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+007     PORTC
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-021 strtok.save
+022-025 _Randseed
+026     MAIN.@SCRATCH1
+027     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     TRISC
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0004  @delay_ms1
+0019  MAIN
+0019  @cinit
+0136  StrtoulGO
+0136  StrtolGO
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\CarlosLap\Desktop\Programación\Unidad 2\FIERRRROOOOOO\
+
+Project Files:
+    P1.c
+    ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F887.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdlib.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stddef.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\string.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\ctype.h
+    ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\stdio.h
+
+Units:
+    C:\Users\CarlosLap\Desktop\Programación\Unidad 2\FIERRRROOOOOO\P1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      P1.err
+    Ext Symbols: P1.esym
+    INHX8:       P1.hex
+    Symbols:     P1.sym
+    List:        P1.lst
+    Debug/COFF:  P1.cof
+    Project:     P1.PJT
+    Call Tree:   P1.tre
+    Statistics:  P1.sta

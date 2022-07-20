@@ -1,0 +1,32 @@
+//Trabajo 1, inicializacion de pines con trisc y protc
+#include <16F887.h>  //libreria al pic a usar
+#DEVICE ADC=8 //Los bits que usara el convertidor
+#fuses INTRC,NOPROTECT,NOLVP,NOWDT,NOBROWNOUT
+#use delay(clock=4000000) //velocidad del reloj interno
+#use rs232 (baud=9600, xmit=PIN_C6, rcv=PIN_C7) //Configuramos la comunicacion serial
+#include <stdlib.h> //Convertir de string a int
+#include <stdio.h> 
+
+#BYTE TRISC = 0x87
+#BYTE PORTC = 0x07
+
+void main()
+{
+   
+   
+      bit_clear(TRISC,1);
+      bit_clear(TRISC,5);
+      bit_clear(TRISC,4);
+
+   while(true)
+   {
+      bit_set(PORTC,1);
+      bit_set(PORTC,5);
+      bit_set(PORTC,4);
+      delay_ms(500);
+      bit_clear(PORTC,1);
+      bit_clear(PORTC,5);
+      bit_clear(PORTC,4);
+      delay_ms(500);
+   }
+}
